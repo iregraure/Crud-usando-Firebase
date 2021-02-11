@@ -1,0 +1,43 @@
+<div class="main">
+    <h1>Video Rental Jacaranda</h1>
+    <nav>
+        <a routerLink="/filmList">Lista de películas</a>
+        <a routerLink="/filmCreate">Añadir película</a>
+    </nav>
+</div>
+<div class="main">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Crear película</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="createForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Título original</mat-label>
+                    <input matInput formControlName="originalTitle">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Título español</mat-label>
+                    <input matInput formControlName="spanishTitle">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Categoría</mat-label>
+                    <input matInput formControlName="category">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Año</mat-label>
+                    <input matInput formControlName="year">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Duración</mat-label>
+                    <input matInput formControlName="duration">
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="crearPelicula()"
+                [disabled]="createForm.invalid">Crear</button>
+            <button mat-raised-button color="warn" (click)='cancelar()'>Cancelar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,89 @@
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    background-color: #eaccff;
+    border-radius: 10px;
+}
+
+nav a:visited,
+a:link {
+    color: black;
+}
+
+nav a:hover {
+    color: black;
+    background-color: #ca80ff;
+}
+nav a.active {
+    color: black;
+}
+
+.main
+{
+    padding-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1
+{
+    font-size: 6vh;
+    color: indigo;
+}
+
+h2,
+table
+{
+    padding-left: 2vw;
+}
+
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+table
+{
+    width: 100%;
+    text-align: center;
+}
+
+.tabla
+{
+    height: 60vh;
+    overflow: auto;
+    width: 90%;
+}
+
+th
+{
+    background-color: indigo;
+    color: #dfb3ff;
+    font-size: 3vh;
+    font-weight: 500;
+}
+
+tr
+{
+    padding: 1px;
+}
+
+tr:nth-child(even)
+{
+    background-color: #f4e6ff;
+}
+
+.salir
+{
+    position: absolute;
+    top: 10vh;
+    right: 10vw;
+}

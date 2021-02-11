@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "rentalshopjacaranda": {
+      "hosting": {
+        "crudFirebase": [
+          "rentalshopjacaranda"
+        ]
+      }
+    }
+  }
+}

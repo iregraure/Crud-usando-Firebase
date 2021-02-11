@@ -1,0 +1,44 @@
+<div class="main" *ngIf="loginService.usuario.uid">
+    <h1>Video Rental Jacaranda</h1>
+    <button class="salir" mat-raised-button color="warn" (click)='loginService.logout()'>Salir</button>
+    <nav>
+        <a routerLink="/filmList">Lista de películas</a>
+        <a routerLink="/filmCreate">Añadir película</a>
+    </nav>
+    <h2>Lista de películas</h2>
+    <div class="tabla">
+        <table>
+            <tr>
+                <th>Nº.</th>
+                <th>Título original</th>
+                <th>Título español</th>
+                <th>Categoría</th>
+                <th>Año</th>
+                <th>Duración</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr *ngFor="let film of films; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ film.originalTitle }}</td>
+                <td>{{ film.spanishTitle }}</td>
+                <td>{{ film.category }}</td>
+                <td>{{ film.year }}</td>
+                <td>{{ film.duration }}</td>
+                <td>
+                    <button mat-icon-button matSuffix (click)="modificaPelicula(film.id)">
+                        <mat-icon>create</mat-icon>
+                    </button>
+                </td>
+                <td>
+                    <button mat-icon-button matSuffix (click)="eliminaPelicula(film.id, i)">
+                        <mat-icon color=warn>delete_forever</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="login" *ngIf="!loginService.usuario.uid">
+    <app-login></app-login>
+</div>
